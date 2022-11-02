@@ -2,3 +2,4 @@
 expo install @expo/ngrok
 expo start --tunnel
 // Native base passo a passo
+npx expo install expo-font @expo-google-fonts/roboto
