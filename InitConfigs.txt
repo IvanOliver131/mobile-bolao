@@ -1,0 +1,3 @@
+// Configurar para App.tsx e criar um tsconfig
+expo install @expo/ngrok
+expo start --tunnel
