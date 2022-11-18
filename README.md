@@ -4,13 +4,6 @@
 </p>
 <h3 align="center"></h3>
 
-<div align="center">
-
-[![Organizador](https://img.shields.io/static/v1?label=Realização&message=rocketseat&color=blueviolet)](sdf)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
-
-</div>
-
 ---
 
 ### Desenvolvimento Web
