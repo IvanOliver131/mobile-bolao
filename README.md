@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://raw.githubusercontent.com/IvanOliver131/mobile-bolao/0ceddd204bfa5141462ab60eebf48d2de0ad3fdf/src/assets/logo.svg" alt="<nlw/> COPA" width="350px"></a>
+ <img src="https://raw.githubusercontent.com/IvanOliver131/mobile-bolao/master/src/assets/logo.svg" alt="<nlw/> COPA" width="350px"></a>
 </p>
 <h3 align="center"></h3>
 
@@ -15,11 +15,11 @@
 
 ### Desenvolvimento Web
 
-<img src="https://github.com/IvanOliver131/mobile-bolao/blob/main/imgs/page.png?raw=true" alt="Página WEB" width="full">
+<img src="https://github.com/IvanOliver131/mobile-bolao/blob/master/imgs/page.png?raw=true" alt="Página WEB" width="full">
 
 ### Desenvolvimento Mobile
 
-<img src="https://github.com/IvanOliver131/mobile-bolao/blob/main/imgs/mobile.gif?raw=true" alt="Tela Login mobile" width="350px">
+<img src="https://github.com/IvanOliver131/mobile-bolao/blob/master/imgs/mobile.gif?raw=true" alt="Tela Login mobile" width="350px">
 
 <br>
 
