@@ -2,9 +2,14 @@ import { Center, Text, Icon } from "native-base";
 import { Fontisto } from "@expo/vector-icons";
 import { Button } from "../../components/Button";
 
-import Logo from "../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
+import { useAuth } from "../../hooks/useAuth";
 
 export function SignIn() {
+  const { signIn, user } = useAuth();
+
+  console.log("Dados do usuário ===>", user);
+
   return (
     <Center flex={1} bgColor="gray.900" p={7}>
       <Logo width={212} height={40} />
@@ -14,6 +19,7 @@ export function SignIn() {
         title="entrar com google"
         type="SECONDARY"
         mt={12}
+        onPress={signIn}
       />
 
       <Text color="gray.300" textAlign="center" mt={4}>
