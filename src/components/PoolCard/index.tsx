@@ -1,7 +1,7 @@
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { Heading, HStack, Text, VStack } from "native-base";
 
-import { Participants, ParticipantProps } from "./Participants";
+import { Participants, ParticipantProps } from "../Participants";
 
 export interface PoolCardProps {
   id: string;
