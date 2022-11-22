@@ -27,7 +27,7 @@ export function Find() {
 
       await api.post("/pools/join", { code });
 
-      return toast.show({
+      toast.show({
         title: "Você entrou no bolão com sucesso!",
         placement: "top",
         bgColor: "red.500",
