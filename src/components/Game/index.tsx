@@ -5,7 +5,6 @@ import dayjs from "dayjs";
 import ptBR from "dayjs/locale/pt-br";
 
 import { Team } from "../Team";
-import { useState } from "react";
 
 interface GuessProps {
   id: string;
@@ -41,9 +40,6 @@ export function Game({
   const when = dayjs(data.date)
     .locale(ptBR)
     .format("DD [de] MMMM [de] YYYY [às] HH:00[h]");
-
-  console.log(`AQUI A DATA: ${data}`);
-  console.log(data);
 
   const firstTeamPoints = data.guess?.firstTeamPoints;
   const secondTeamPoints = data.guess?.secondTeamPoints;

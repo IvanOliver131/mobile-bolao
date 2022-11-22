@@ -1,17 +1,17 @@
 import { Box, FlatList, Toast } from "native-base";
 import { useEffect, useState } from "react";
-import { api } from "../services/api";
+import { api } from "../../services/api";
 import { EmptyMyPoolList } from "../EmptyMyPoolList";
 import { Game, GameProps } from "../Game";
 import { Loading } from "../Loading";
+import { PoolCardProps } from "../../components/PoolCard";
 
 interface Props {
   poolId: string;
   code: string;
 }
-
 export function Guesses({ poolId, code }: Props) {
-  const [isLoading, setLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [games, setGames] = useState<GameProps[]>([]);
   const [firstTeamPoints, setFirstTeamPoints] = useState<string>("");
   const [secondTeamPoints, setSecondTeamPoints] = useState<string>("");
@@ -26,17 +26,22 @@ export function Guesses({ poolId, code }: Props) {
         });
         return;
       }
-      await api.post(`/pools/${poolId}/game/${gameId}/guesses`, {
-        firstTeamPoints: Number(firstTeamPoints),
-        secondTeamPoints: Number(secondTeamPoints),
-      });
+
+      const response = await api.post(
+        `/pools/${poolId}/games/${gameId}/guesses`,
+        {
+          firstTeamPoints: Number(firstTeamPoints),
+          secondTeamPoints: Number(secondTeamPoints),
+        }
+      );
+
       Toast.show({
         title: "Palpite enviado",
         placement: "top",
         bgColor: "green.500",
       });
+
       fetchGames();
-      // setDetails(response.data.poll)
     } catch (err) {
       console.log(err.response?.data);
       if (
@@ -55,13 +60,13 @@ export function Guesses({ poolId, code }: Props) {
         bgColor: "red.500",
       });
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   }
 
   async function fetchGames() {
     try {
-      setLoading(true);
+      setIsLoading(true);
       const response = await api.get(`/pools/${poolId}/games`);
       console.log(response.data.games);
       setGames(response.data.games);
@@ -73,7 +78,7 @@ export function Guesses({ poolId, code }: Props) {
         color: "red.500",
       });
     } finally {
-      setLoading(false);
+      setIsLoading(false);
     }
   }
 
