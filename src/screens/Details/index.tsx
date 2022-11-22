@@ -6,6 +6,7 @@ import { Loading } from "../../components/Loading";
 import { api } from "../../services/api";
 import { PoolCardProps } from "../../components/PoolCard";
 import { PoolHeader } from "../../components/PoolHeader";
+import { EmptyMyPoolList } from "../../components/EmptyMyPoolList";
 
 interface RouteParams {
   id: string;
@@ -16,8 +17,10 @@ export function Details() {
   const [poolDetails, setPoolDetails] = useState<PoolCardProps>(
     {} as PoolCardProps
   );
+
   const route = useRoute();
   const toast = useToast();
+
   const { id } = route.params as RouteParams;
 
   async function fetchPoolDetails() {
@@ -61,7 +64,7 @@ export function Details() {
           <PoolHeader data={poolDetails} />
         </VStack>
       ) : (
-        ""
+        <EmptyMyPoolList code={poolDetails.code} />
       )}
     </VStack>
   );
